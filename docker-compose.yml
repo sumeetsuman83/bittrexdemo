@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  Bittrexdemo:
+    image: bittrexdemo:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bittrexdemocontainer
+    restart: "no"
+    volumes:
+      - "/home/niit/Music/sumeetcode/data:/home/user/data"
+    ports:
+     - "5000:5000"

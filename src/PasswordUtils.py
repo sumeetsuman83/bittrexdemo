@@ -3,29 +3,28 @@ from decouple import config
 # we will be encrypting the below string.
 
 def EncryptPassword(message):
-    key=open("../data/key.key", "rb").read()
+    """
+    The EncryptPassword function takes a string as an argument and returns the encrypted version of that string.
+    It uses the Fernet encryption algorithm to encrypt the password, which is then returned.
+    
+    :param message: Encrypt the password
+    :return: The encrypted message
+    """
+    key=open(config("passwordkey"), "rb").read()
     fernet = Fernet(key)
     encMessage = fernet.encrypt(message.encode())
     return encMessage
 
-    # print("original string: ", message)
-    # print("encrypted string: ", encMessage)
-
-    # # decrypt the encrypted string with the
-    # # Fernet instance of the key,
-    # # that was used for encrypting the string
-    # # encoded byte string is returned by decrypt method,
-    # # so decode it to string with decode methods
-    # decMessage = fernet.decrypt(encMessage).decode()
-
-    # print("decrypted string: ", decMessage)
-
-# gAAAAABjcQ-J8Gzkq8a2oqQMwZuEpcrddqnVBpyHzFKUAppq4gNRU3hf65Zw1nHnouNjZCHdtbV-paD6X34Uj-ki6Wiif4DGGA==
-
-
 
 def DecryptPassword(password):
-    key=open("../data/key.key", "rb").read()
+    """
+    The DecryptPassword function takes a password and decrypts it using the Fernet encryption algorithm.
+    It then returns the decrypted password.
+    
+    :param password: Decrypt the password
+    :return: The decrypted password
+    """
+    key=open(config("passwordkey"), "rb").read()
     fernet = Fernet(key)
     decMessage = fernet.decrypt(password).decode()
     return decMessage
