@@ -89,9 +89,10 @@ if the container is up and running
 2) To create this keys please follow steps given in this post "https://bittrex.zendesk.com/hc/en-us/articles/360031921872-How-to-create-an-API-key-".
 3) Clone this repo.
 3) Write down the keys in .env file we can directly run "docker-compose up --build" to build and start the micro-service.
-4) Create a new user.
-5) Login and get the JWT token.This token will be valid for 10 mins.
-6) Use the token to get market summary.
+4) Onces build please open "http://0.0.0.0:5000/docs" in your browser and play with api's.
+5) Create a new user.
+6) Login and get the JWT token.This token will be valid for 10 mins.
+7) Use the token to get market summary.
 ## Authors
 
 - [sumeetsuman83](https://github.com/sumeetsuman83)
