@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfil
-    container_name: bittrexdemocontainer
+    container_name: bittrexdemocontaine
     restart: "no"
     volumes:
       - "/home/niit/Music/sumeetcode/data:/home/user/data"
