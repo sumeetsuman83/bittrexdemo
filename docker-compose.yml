@@ -5,7 +5,7 @@ services:
     image: bittrexdemo:latest
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfil
     container_name: bittrexdemocontainer
     restart: "no"
     volumes:
