@@ -74,7 +74,7 @@ class JwtBearer(HTTPBearer):
         :param jwtoken:str: Pass the jwtoken string that is passed into the verifyjwt function
         :return: True if the token is valid, and false otherwise
         """
-        isTokenValid: bool = False
+        isTokenValid: bool = True
 
         try:
             payload = DecodeJwt(jwtoken)
